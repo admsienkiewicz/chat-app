@@ -1,0 +1,52 @@
+$primary-color: #282641d0;
+$second-color: #dbd9f2;
+$message-color-dark: #4d63ab;
+$message-color-light: #96a8e1;
+
+.SingleContact {
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .contactPreview {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+
+        span {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        p {
+            color: $message-color-dark;
+            font-size: 15px;
+        }
+    }
+
+    &:hover {
+        background-color: $primary-color;
+
+        .contactPreview {
+            span {
+                color: $second-color;
+            }
+
+            p {
+                color: $message-color-light;
+            }
+        }
+    }
+}

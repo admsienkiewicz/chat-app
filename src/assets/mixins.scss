@@ -1,0 +1,9 @@
+$small-width: 480px;
+$medium-width: 768px;
+$large-width: 1024px;
+
+@mixin mobile {
+    @media (max-width: #{$small-width - 1px}) {
+        @content;
+    }
+}

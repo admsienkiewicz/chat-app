@@ -1,0 +1,78 @@
+@import '../assets/mixins.scss';
+$font-color-dark: #3f3a76;
+$font-color-light: #5c55a2;
+$input-font-color: #2d2856d0;
+$form-background-color: rgba(246, 244, 254, 0.775);
+$button-color: #5e77c8;
+
+.formContainer {
+    padding: 30px 80px;
+    background-color: $form-background-color;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: $font-color-dark;
+    font-family: 'Oswald', sans-serif;
+
+    @include mobile {
+        height: 80vh;
+        width: 95vw;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+    form {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input {
+            padding: 15px;
+            border: none;
+            background-color: transparent;
+            width: 250px;
+            border-bottom: 1px solid #a7bcff;
+            outline: none;
+            text-align: center;
+            color: $input-font-color;
+            font-weight: 550;
+            &::placeholder {
+                color: $font-color-light;
+            }
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: $button-color;
+            color: white;
+            padding: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}

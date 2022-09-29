@@ -1,0 +1,50 @@
+$font-color-dark: #3f3a76;
+$background-color: #5c55a2;
+$input-font-color: #2d2856d0;
+$main-background-color: #ffffff82;
+$button-color: #5e77c8;
+
+.InputMessage {
+    height: 90px;
+    display: flex;
+    background-color: $background-color;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    input {
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 10px;
+        height: 100%;
+        width: 75%;
+        overflow: scroll;
+    }
+
+    .inputOptions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+
+        img {
+            height: 35px;
+            cursor: pointer;
+        }
+
+        button {
+            cursor: pointer;
+            margin-left: 5px;
+            margin-top: -2px;
+            text-align: center;
+            padding: 10px;
+            font-size: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: $main-background-color;
+            color: $input-font-color;
+            font-weight: bold;
+        }
+    }
+}

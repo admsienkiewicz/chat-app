@@ -1,0 +1,37 @@
+@import '../assets/mixins';
+$background-color: #3f3a76;
+$font-color: #dbd9f2;
+$button-color: #748cdc;
+$main-background-color: #ffffff82;
+$img-border-color: rgb(142, 220, 24);
+
+.ChatBox {
+    background-color: $main-background-color;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .chatInfo {
+        border-bottom: 3px solid white;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: $font-color;
+        background-color: $background-color;
+
+        p {
+            font-size: 15px;
+            position: absolute;
+            left: 10px;
+            top: 27px;
+            font-weight: 400;
+            display: none;
+
+            @include mobile {
+                display: inline;
+            }
+        }
+    }
+}

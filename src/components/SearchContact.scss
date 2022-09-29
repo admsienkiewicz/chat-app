@@ -1,0 +1,33 @@
+$dark-color: #2d2856d0;
+$font-color: #dbd9f2;
+$button-color: #748cdc;
+
+.searchContact {
+    padding: 10px 20px;
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+
+        input {
+            outline: none;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $dark-color;
+            width: 200px;
+            text-align: center;
+            color: $dark-color;
+        }
+
+        button {
+            padding: 10px;
+            background: $dark-color;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            color: $font-color;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+$background-color: #2d2856d0;
+$font-color: #dbd9f2;
+$button-color: #748cdc;
+$img-border-color: rgb(142, 220, 24);
+
+.SingleMessage {
+    padding: 5px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .avatar {
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid $background-color;
+    }
+
+    .messageContent {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p {
+            height: 70%;
+            max-height: 80%;
+            background-color: $background-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            color: $font-color;
+            border-radius: 15px;
+            border-top-left-radius: 0;
+            max-width: max-content;
+        }
+
+        img {
+            width: 40%;
+            object-fit: cover;
+        }
+    }
+
+    &.userMessage {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        .messageContent {
+            align-items: flex-end;
+            p {
+                border-radius: 15px;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+}

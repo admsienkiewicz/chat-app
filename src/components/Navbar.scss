@@ -1,0 +1,43 @@
+$background-color: #3f3a76;
+$font-color: #dbd9f2;
+$button-color: #748cdc;
+$img-border-color: rgb(142, 220, 24);
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 80px;
+    background-color: $background-color;
+    border-bottom: 3px solid white;
+
+    .userInfo {
+        display: flex;
+        align-items: center;
+        color: $font-color;
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid $img-border-color;
+        }
+
+        .userName {
+            margin-left: 15px;
+            font-size: 22px;
+        }
+    }
+
+    button {
+        border: none;
+        border-radius: 4px;
+        background-color: $button-color;
+        cursor: pointer;
+        padding: 5px 10px;
+        height: 30px;
+        color: $font-color;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,41 @@
+@import '../assets/mixins';
+$font-color-dark: #3f3a76;
+$font-color-light: #5c55a2;
+$input-font-color: #2d2856d0;
+$main-background-color: #ffffff82;
+$button-color: #5e77c8;
+
+.Main {
+    width: 1000px;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    gap: 5px;
+
+    @include mobile {
+        width: 99vw;
+        height: 70vh;
+    }
+
+    .Sidebar {
+        flex: 1;
+        background-color: $main-background-color;
+        @include mobile {
+            flex: 1;
+            width: 95vw;
+            &.closed {
+                display: none;
+            }
+        }
+    }
+    .ChatBox {
+        flex: 2;
+
+        @include mobile {
+            &.closed {
+                display: none;
+            }
+        }
+    }
+}
