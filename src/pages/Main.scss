@@ -10,7 +10,6 @@ $button-color: #5e77c8;
     height: 600px;
     border-radius: 20px;
     display: flex;
-    overflow: hidden;
     gap: 5px;
 
     @include mobile {

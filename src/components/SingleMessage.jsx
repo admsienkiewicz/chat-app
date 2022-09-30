@@ -1,20 +1,27 @@
-import React from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
+import { AuthContext } from '../context/AuthCotntext'
+import { ChatContext } from '../context/ChatContext'
 import './SingleMessage.scss'
 
-const SingleMessage = () => {
+const SingleMessage = ({ messageContent }) => {
+    const { currUser } = useContext(AuthContext)
+    const { data } = useContext(ChatContext)
+
+    const ref = useRef()
+
+    useEffect(() => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' })
+    }, [messageContent])
     return (
-        <div className="SingleMessage userMessage">
+        <div ref={ref} className={`SingleMessage ${messageContent.senderId === currUser.uid && 'userMessage'}`}>
             <img
                 className="avatar"
-                src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.6435-9/104598313_3043668482348090_7809686983493534073_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=jE1B0yQoUqgAX9JPTK3&_nc_ht=scontent-waw1-1.xx&oh=00_AT8frd2CydbQyovAXPmP6G7c5NaMh9ajdDR6bA0uLPWvAQ&oe=635BA48E"
-                alt=""
+                src={messageContent.senderId === currUser.uid ? currUser.photoURL : data.user.photoURL}
+                alt="avatar-img"
             />
             <div className="messageContent">
-                <p>Elo byku co tam udsa</p>
-                <img
-                    src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.6435-9/104598313_3043668482348090_7809686983493534073_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=jE1B0yQoUqgAX9JPTK3&_nc_ht=scontent-waw1-1.xx&oh=00_AT8frd2CydbQyovAXPmP6G7c5NaMh9ajdDR6bA0uLPWvAQ&oe=635BA48E"
-                    alt=""
-                />
+                {messageContent.text && <p>{messageContent.text}</p>}
+                {messageContent.img && <img src={messageContent.img} alt="" />}
             </div>
         </div>
     )

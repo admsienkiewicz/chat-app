@@ -4,14 +4,13 @@ $button-color: #748cdc;
 $img-border-color: rgb(142, 220, 24);
 
 .SingleMessage {
-    padding: 5px;
     display: flex;
     gap: 20px;
-    flex-direction: row;
-    align-items: flex-start;
+    margin-bottom: 20px;
 
     .avatar {
         height: 50px;
+        width: 50px;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid $background-color;
@@ -21,23 +20,20 @@ $img-border-color: rgb(142, 220, 24);
         display: flex;
         flex-direction: column;
         gap: 5px;
+        max-width: 80%;
+        margin-top: 10px;
+
         p {
-            height: 70%;
-            max-height: 80%;
-            background-color: $background-color;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
+            background-color: $background-color;
             color: $font-color;
-            border-radius: 15px;
-            border-top-left-radius: 0;
-            max-width: max-content;
+            padding: 10px 20px;
+            border-radius: 0px 10px 10px 10px;
+            max-width: 300px;
         }
 
         img {
-            width: 40%;
-            object-fit: cover;
+            width: 50%;
         }
     }
 
@@ -49,6 +45,9 @@ $img-border-color: rgb(142, 220, 24);
             p {
                 border-radius: 15px;
                 border-top-right-radius: 0;
+                background-color: $font-color;
+                border: solid 2px $background-color;
+                color: $background-color;
             }
         }
     }
